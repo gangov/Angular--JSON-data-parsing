@@ -1,0 +1,16 @@
+<div class="product">
+  <div class="product-image-holder">
+    <img [src]="product.image" [alt]="product.ProductName" class="product-image" />
+  </div>
+  <div class="product-details">
+    <p class="product-details__name">{{ product.ProductName }}</p>
+    <p class="product-details__price">${{ product.UnitPrice }}</p>
+  </div>
+  <div class="product-description">
+    <p>Will be at your house on </p>
+    <p class="product-description__date">{{ product.DeliveryOn | date: 'EEEE, MMMM d, y' }}</p>
+  </div>
+  <div class="product-quantity">
+    <p>There are: <b>{{product.UnitsInStock}}</b> products available</p>
+  </div>
+</div>
